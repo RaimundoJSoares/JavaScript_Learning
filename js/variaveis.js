@@ -12,3 +12,5 @@ num = num / 4;
 num = num ** 11;
 
 console.log(num)
+
+

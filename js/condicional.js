@@ -46,3 +46,37 @@ weekdays = "the sleepy Saturday";
 }
 
 document.getElementById("switch-demo").innerHTML = "Today is " + weekdays + "." + " Have a great and productive day!";
+
+//operador ternario
+let pontos = 90;
+let tipo = pontos > 100? 'premium': 'comum'
+console.log(tipo);
+
+let hora = 10
+if (hora > 6 <= 12) {
+  console.log('bom dia');
+}
+else if (hora > 12 <= 18) {
+  console.log('boa tarde');
+}
+else {
+  console.log('boa noite')
+}
+
+let permissao; //comum, engenheiro, gerente
+permissao = 'dono'
+switch (permissao) {
+  case 'comum' :
+    console.log('usuario comum')
+    break;
+
+  case 'gerente':
+    console.log('usuario gerente')
+    break;
+  
+  case 'engenheiro':
+      console.log('usuario engenheiro')
+      break;
+  default:
+    console.log('usuario nao reconhecido');
+}
