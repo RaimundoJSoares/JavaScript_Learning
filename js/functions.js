@@ -32,3 +32,12 @@ function multiplicador(primeiro, segundo){
   return primeiro * segundo
 };
 console.log(multiplicador(2,3))
+
+const tabela = [1, 2, 3, 4, 5, 6, 7, 8, 9 , 10];
+
+function raizquadrada(numero){
+  return numero **2
+};
+const raizquadradas = tabela.map(raizquadrada)
+console.log(raizquadradas)
+
