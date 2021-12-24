@@ -41,3 +41,57 @@ function raizquadrada(numero){
 const raizquadradas = tabela.map(raizquadrada)
 console.log(raizquadradas)
 
+function sayhello() {
+  let you = prompt("Qual seu nome?");
+  console.log("Olá", you + "!")
+}
+sayhello();
+
+//factory functions - camel case -  umDoisTresQuatroCinco...
+function criarSmartphone(marca, tamanhoTela, capacidadeBateria) {
+  return {
+    marca,
+    tamanhoTela,
+    capacidadeBateria,
+    ligar() {
+      console.log('Fazendo ligação...')
+    }
+  }
+}
+const celular1 = criarSmartphone('Samsung S12', 6.0, 5000 )
+console.log(celular1)
+
+//construction function - pascal Case -  UmDoisTresQuatroCinco....
+function Smartphone(marcaCelular, tamanhoTela, capacidadeBateria) {
+  this.marcaCelular = marcaCelular,
+  this.tamanhoTela = tamanhoTela,
+  this.capacidadeBateria = capacidadeBateria,
+  this.ligar = function() {
+    console.log("Fazendo Ligação...");
+  }
+}
+const Celular = new Smartphone('LG', 5.5, 6000);
+console.log(Celular)
+
+//objeto dinamico
+const mouse = {
+  cor: 'black',
+  marca: 'multilaser'
+}
+mouse.velocidade = 5000;
+mouse.trocarDPI = function() {
+  console.log('Trocando DPI');
+}
+delete mouse.velocidade;
+delete mouse.trocarDPI;
+console.log(mouse)
+
+//clone object
+const clone = {...mouse};
+console.log(clone)
+
+//Math
+function nrandom(){
+  return Math.random()
+}
+console.log(nrandom)
