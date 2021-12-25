@@ -1,2 +1,2 @@
 # JavaScript_Learning
-My studies about JS
+My studies about JavaScript
