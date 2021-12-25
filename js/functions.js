@@ -95,3 +95,19 @@ function nrandom(){
   return Math.random()
 }
 console.log(nrandom)
+
+//contruct function treino
+function Postagem(titulo, mensagem, autor) {
+  this.titulo = titulo,
+  this.mensagem = mensagem,
+  this.autor = autor,
+  this.visualizacoes = 0,
+  this.aovivo = false
+}
+const dados = new Postagem('eu', 'eu mesmo', 'até mesmo eu');
+console.log(dados)
+
+//arrow function - simplifica o código
+//var soma = function(a, b) {return a + b}
+var soma = (a,b) => a+b
+console.log(19, 16)
