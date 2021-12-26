@@ -37,3 +37,25 @@ let message = new Persona('Sakamata', 'Chloe');
 let happy = message.wishes('Merry Christmas')
 console.log(happy, message.greet())
 
+class Information {
+  #namee;
+  #age
+  constructor(namee, age){
+    this.#namee = namee;
+    this.#age = age;
+  }
+  get name(){
+    return this.#namee;
+  }
+  set name(namee){
+    return this.#namee = namee;
+  }
+  get age(){
+    return this.#age;
+  }
+  set age(age) {
+    return this.#age = age;
+  }
+}
+info = new Information('Sakamata Chloe', 19);
+console.log(info.namee);
