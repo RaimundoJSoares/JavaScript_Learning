@@ -35,12 +35,13 @@
       }
     })
 
+    //encadeamento de then
     minhaPromessa2
     .then((dados) =>{
       return dados.toUpperCase()
     })
     .then((stringModificada) => {
-      console.log(stringModificada)
+      console.log(stringModificada) //esperando string modificada do primeiro .then, que é exibir
     })
 
     const minhaPromessa3 = new Promise((resolve, reject) => {

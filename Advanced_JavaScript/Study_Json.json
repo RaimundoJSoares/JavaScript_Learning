@@ -1,0 +1,10 @@
+{
+  "nome": "Rai",
+  "idade": 30,
+  "trabalhando": true,
+  "detalhes da profissão":{
+    "profissão": "Programador",
+    "empresa": "xyz"
+  },
+  "hobbies":["Ler", "jogar jogos de pc", "Assistir séries/filmes"]
+}
