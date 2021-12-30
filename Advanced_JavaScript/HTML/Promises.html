@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    const minhaPromessa = new Promise((resolve, reject) => {
+      const nome = 'Rai'
+
+      if (nome === "Rai") {
+        resolve('Usuário encontrado')
+      } else {
+        reject('Usuário inválido, tente novamente!')
+      }
+    })
+
+    //necessário usar método then para conseguir uma resposta
+    minhaPromessa.then((dados) =>{
+      console.log(dados)
+    })
+
+    const minhaPromessa2 = new Promise((resolve, reject) => {
+      const nome = 'Rai'
+
+      if (nome === "Rai") {
+        resolve('Usuário encontrado')
+      } else {
+        reject('Usuário inválido, tente novamente!')
+      }
+    })
+
+    minhaPromessa2
+    .then((dados) =>{
+      return dados.toUpperCase()
+    })
+    .then((stringModificada) => {
+      console.log(stringModificada)
+    })
+
+    const minhaPromessa3 = new Promise((resolve, reject) => {
+      const nome = 'Chloe'
+
+      if (nome === "Rai") {
+        resolve('Usuário encontrado')
+      } else {
+        reject('Usuário inválido, tente novamente!')
+      }
+    })
+
+    //usando catch para tratar erro
+    minhaPromessa3
+    .then((dados) => {
+      console.log(dados)
+    })
+    .catch((erro) => {
+      console.log("Aconteceu um erro " + erro)
+    })
+
+    //resolvendo várias promises
+    const p1 = new Promise((resolve, reject)=>{
+      resolve('p1 ok!')
+    })
+    const p2 = new Promise((resolve, reject)=>{
+      resolve('p2 ok!')
+    })
+    const p3 = new Promise((resolve, reject)=>{
+      resolve('p3 ok!')
+    })
+    const resolveAll = Promise.all([p1, p2, p3]).then((dados) =>{
+      console.log(dados)
+    })
+    
+    //resolvendo varias promises com race
+    const p4 = new Promise((resolve, reject)=>{
+      resolve('p4 ok!')
+    })
+    const p5 = new Promise((resolve, reject)=>{
+      resolve('p5 ok!')
+    })
+    const p6 = new Promise((resolve, reject)=>{
+      resolve('p6 ok!')
+    })
+    const resolverace = Promise.race([p4, p5, p6]).then((dados) =>{
+      console.log(dados)
+    })
+
+  </script>
+  
+</body>
+</html>
