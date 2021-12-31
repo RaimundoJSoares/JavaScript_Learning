@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //using stringify() and parse() for json
+      const objeto = [
+        {
+          nome: "Rai",
+          idade: 30,
+          trabalhando: true,
+          detalhes_profissão: {
+            profissão: "Programador",
+            empresa: "xyz",
+          },
+          hobbies: ["Ler", "jogar jogos de pc", "Assistir séries/filmes"],
+        },
+        {
+          nome: "Chloe",
+          idade: 20,
+          trabalhando: false,
+          detalhes_profissão: {
+            profissão: null,
+            empresa: null,
+          },
+          hobbies: ["jogar", "bater papo", "viajar"],
+        },
+      ];
+      //converter objeto para json
+      const jsonData = JSON.stringify(objeto)
+      console.log(jsonData)
+      console.log(typeof jsonData)
+
+      //converter json para objeto
+      const dataJson = JSON.parse(jsonData);
+      console.log(dataJson);
+      console.log(typeof dataJson);
+
+      dataJson.map((pessoa) =>{
+        console.log(pessoa.nome)
+      })
+
+    </script>
+  </body>
+</html>
